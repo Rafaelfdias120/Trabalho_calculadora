@@ -1,0 +1,89 @@
+==================================================================
+  TESTES OBRIGATORIOS (TP03 - Avaliador de Expressoes Numericas)  
+==================================================================
+--- Teste 1 ---
+Pos-Fixa: 3 4 + 5 *
+Avaliacao: OK. Valor Calculado: 35.00 (Esperado: 35.00)
+Conversao: OK. Infixa Calculada: (3+4)*5 (Esperada: (3+4)*5)
+--- Teste 2 ---
+Pos-Fixa: 7 2 * 4 +
+Avaliacao: OK. Valor Calculado: 18.00 (Esperado: 18.00)
+Conversao: OK. Infixa Calculada: (7*2)+4 (Esperada: (7*2)+4)
+--- Teste 3 ---
+Pos-Fixa: 8 5 2 4 + * +
+Avaliacao: OK. Valor Calculado: 38.00 (Esperado: 38.00)
+Conversao: OK. Infixa Calculada: 8+(5*(2+4)) (Esperada: 8+(5*(2+4)))
+--- Teste 4 ---
+Pos-Fixa: 6 2 / 3 + 4 *
+Avaliacao: OK. Valor Calculado: 24.00 (Esperado: 24.00)
+Conversao: OK. Infixa Calculada: ((6/2)+3)*4 (Esperada: ((6/2)+3)*4)
+--- Teste 5 ---
+Pos-Fixa: 9 5 2 8 * 4 + * +
+Avaliacao: OK. Valor Calculado: 109.00 (Esperado: 109.00)
+Conversao: OK. Infixa Calculada: 9+(5*((2*8)+4)) (Esperada: 9+(5*((2*8)+4)))
+--- Teste 6 ---
+Pos-Fixa: 2 3 + log 5 /
+Avaliacao: OK. Valor Calculado: 0.14 (Esperado: 0.14)
+Conversao: OK. Infixa Calculada: log((2+3))/5 (Esperada: log((2+3))/5)
+--- Teste 7 ---
+Pos-Fixa: 10 log 3 ^ 2 +
+Avaliacao: OK. Valor Calculado: 3.00 (Esperado: 3.00)
+Conversao: OK. Infixa Calculada: (log(10)^3)+2 (Esperada: (log(10)^3)+2)
+--- Teste 8 ---
+Pos-Fixa: 45 60 + 30 cos *
+Avaliacao: OK. Valor Calculado: 90.93 (Esperado: 90.93)
+Conversao: OK. Infixa Calculada: (45+60)*cos(30) (Esperada: (45+60)*cos(30))
+--- Teste 9 ---
+Pos-Fixa: 0.5 45 sen 2 ^ +
+Avaliacao: OK. Valor Calculado: 1.00 (Esperado: 1.00)
+Conversao: OK. Infixa Calculada: 0.5+(sen(45)^2) (Esperada: 0.5+(sen(45)^2))
+==================================================================
+              TESTES ADICIONAIS (Robustez e Erros)              
+==================================================================
+--- Teste 10 ---
+Pos-Fixa: 9 raiz
+Avaliacao: OK. Valor Calculado: 3.00 (Esperado: 3.00)
+Conversao: OK. Infixa Calculada: raiz(9) (Esperada: raiz(9))
+--- Teste 11 ---
+Pos-Fixa: 10 3 %
+Avaliacao: OK. Valor Calculado: 1.00 (Esperado: 1.00)
+Conversao: OK. Infixa Calculada: 10%3 (Esperada: 10%3)
+--- Teste 12 ---
+Pos-Fixa: 5 0 /
+Erro: Divisao por zero.
+Avaliacao: ERRO (Expressao Invalida)
+Conversao: OK. Infixa Calculada: 5/0 (Esperada: 5/0)
+--- Teste 13 ---
+Pos-Fixa: -4 raiz
+Erro: Raiz quadrada de numero negativo.
+Avaliacao: ERRO (Expressao Invalida)
+Conversao: OK. Infixa Calculada: raiz(-4) (Esperada: raiz(-4))
+--- Teste 14 ---
+Pos-Fixa: 0 log
+Erro: Logaritmo de numero nao positivo.
+Avaliacao: ERRO (Expressao Invalida)
+Conversao: OK. Infixa Calculada: log(0) (Esperada: log(0))
+--- Teste 15 ---
+Pos-Fixa: 1.5 2.5 +
+Avaliacao: OK. Valor Calculado: 4.00 (Esperado: 4.00)
+Conversao: OK. Infixa Calculada: 1.5+2.5 (Esperada: 1.5+2.5)
+--- Teste 16 ---
+Pos-Fixa: + 5 3
+Erro: Expressao pos-fixa invalida (operador binario sem operandos).
+Avaliacao: ERRO (Expressao Invalida)
+Erro: Expressao pos-fixa invalida (operador binario sem operandos).
+Conversao: ERRO (Expressao Invalida)
+--- Teste 17 ---
+Pos-Fixa: 5 3 + 2
+Erro: Expressao pos-fixa invalida (operandos restantes).
+Avaliacao: ERRO (Expressao Invalida)
+Erro: Expressao pos-fixa invalida (operandos restantes).
+Conversao: ERRO (Expressao Invalida)
+--- Teste 18 ---
+Pos-Fixa: 2 3 ^
+Avaliacao: OK. Valor Calculado: 8.00 (Esperado: 8.00)
+Conversao: OK. Infixa Calculada: 2^3 (Esperada: 2^3)
+--- Teste 19 ---
+Pos-Fixa: 1 2 + 3 * 4 5 - / sen
+Avaliacao: OK. Valor Calculado: -0.16 (Esperado: -0.16)
+Conversao: OK. Infixa Calculada: sen((((1+2)*3)/(4-5))) (Esperada: sen((((1+2)*3)/(4-5))))

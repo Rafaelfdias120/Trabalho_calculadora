@@ -1,0 +1,96 @@
+Leia atentamente e por completo o PDF fornecido /mnt/data/TP03 - Avaliador de expressões numéricas.pdf. 
+
+TP03 - Avaliador de expressões …
+
+
+Também abra e consulte os códigos exemplo /mnt/data/ExemploPilha.c e /mnt/data/ExemploLista.c para seguir a lógica, estilo, organização e convenções de nomeação mostradas neles. 
+
+ExemploPilha
+
+ 
+
+ExemploLista
+
+A seguir estão instruções obrigatórias — você deve segui-las com precisão:
+
+Priorize estritamente as regras do PDF. Tudo que o PDF exige (protótipos, arquivos, critérios de avaliação, comportamento em erros, formato de retorno, compilação, testes obrigatórios) deve ser respeitado ao pé da letra.
+
+Estrutura de arquivos e compilação: o projeto final deve estar organizado conforme o PDF (arquivos e nomes exigidos no PDF — por exemplo expressao.c, expressao.h e main.c, e o comando de compilação indicado no PDF: gcc expressao.c main.c -o expressao.exe). Se o PDF indicar um nome diferente para a unidade (por ex. calculadora.c), priorize o cabeçalho e a estrutura exatamente como estão no PDF. 
+
+TP03 - Avaliador de expressões …
+
+Não altere o cabeçalho obrigatório. O arquivo de cabeçalho indicado no PDF (o expressao.h apresentado) não deve ser alterado — mantenha os tipos e protótipos exatamente como no PDF (por exemplo o typedef struct { ... } Expressao; e as assinaturas char * getFormaInFixa(char *Str); e float getValorPosFixa(char *StrPosFixa);). 
+
+TP03 - Avaliador de expressões …
+
+Nomes em Português — sem inglês: evite nomes em inglês para variáveis, funções, structs e procedimentos. Use nomes em português consistentes com os exemplos (pilha, empilhar, desempilhar, No, ler_pessoa, imprimir_pilha, etc.) e com o estilo dos arquivos exemplo. Se algum identificador for imposto pelo PDF (por ex. Expressao), mantenha-o; fora isso, tudo em português.
+
+Use os exemplos como guia de estilo: implemente estruturas de pilha/lista, manipulação de memória, checagem de erros, comentários e nomeação seguindo o estilo dos arquivos:
+
+Consulte /mnt/data/ExemploPilha.c para padrão de pilha (alocação dinâmica, push/pop, nomes e comentários). 
+
+ExemploPilha
+
+Consulte /mnt/data/ExemploLista.c para padrão de lista e convenções de procedimentos. 
+
+ExemploLista
+
+Funcionalidades obrigatórias (resumir do PDF):
+
+Conversão infixa → pós-fixa e pós-fixa → infixa.
+
+Avaliação de expressões pós-fixas.
+
+Operadores aritméticos: +, -, *, /, %, ^.
+
+Funções unárias: raiz (sqrt), sen, cos, tg, log (log10). Lembre que sen, cos, tg recebem ângulos em graus (faça a conversão para radianos internamente).
+
+Operadores unários devem atuar sobre um operando.
+
+Tratamento das entradas inválidas e retorno NULL em getFormaInFixa quando houver erro, conforme PDF. 
+
+TP03 - Avaliador de expressões …
+
+Formato das strings retornadas: A string retornada por getFormaInFixa() não deve conter espaços desnecessários, nem parênteses além dos estritamente necessários (seguir instrução do PDF). Em caso de erro, retorne NULL. 
+
+TP03 - Avaliador de expressões …
+
+Compatibilidade e portabilidade: o código deve obedecer ao padrão C, compilar sem erros com gcc (compatível com Windows/Dev-C++/VSCode). Faça alocação e liberação de memória corretamente.
+
+Testes: garanta que o programa avalie corretamente os testes fornecidos no PDF (valores aproximados quando indicado). Além disso, inclua alguns testes adicionais robustos (casos de erro, operações com floats, precedência e parênteses). Liste os testes no main.c.
+
+Comentários e documentação: inclua comentários em português explicando cada função (propósito, parâmetros, retorno) seguindo o estilo dos exemplos. Evite comentários em inglês.
+
+Entrega solicitada: gere o/arquivos fonte conforme o PDF (implementação das funções pedidas). Se o PDF solicitar apenas um arquivo específico para submissão (por ex. calculadora.c), explique essa diferença e gere também a versão organizada com expressao.c, expressao.h e main.c para facilitar a compilação automática.
+
+Validação extra: antes de finalizar, compile mentalmente (ou indique os comandos) gcc expressao.c main.c -o expressao.exe e explique brevemente como testar (com as expressões de teste do PDF).
+
+Pedido de saída
+
+Entregue um projeto C pronto (texto do código) contendo:
+
+expressao.h (conforme PDF — sem alterações). 
+
+TP03 - Avaliador de expressões …
+
+expressao.c com a implementação solicitada (todas as funções públicas do header implementadas) — nada em inglês nos identificadores (exceto Expressao se for exigido).
+
+main.c com um menu de testes que rode os casos do PDF e imprima os resultados (inclua testes extras).
+
+Comentários explicativos em português.
+
+Se houver ambiguidades nas instruções do PDF, explique as escolhas feitas (mostre o trecho do PDF que motivou a escolha e sua decisão).
+
+Use estes arquivos como referência (abra-os e siga-os)
+
+/mnt/data/TP03 - Avaliador de expressões numéricas.pdf. 
+
+TP03 - Avaliador de expressões …
+
+/mnt/data/ExemploPilha.c. 
+
+ExemploPilha
+
+/mnt/data/ExemploLista.c. 
+
+ExemploLista
